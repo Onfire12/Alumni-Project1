@@ -1,12 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import CurrencyConverter from "./currencyConverter";
+
+
+import Main from './Main';
+import Test from './Test/index.js';
 
 function App() {
   return (
     <div className="App">
-      <CurrencyConverter/>
+      <Main/>
     </div>
   );
 }

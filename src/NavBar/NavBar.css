@@ -1,0 +1,56 @@
+.NavBar{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: cornsilk;  
+    display: flex;
+    justify-content: center;
+}
+
+.NavUl{
+    list-style: none;
+    padding: 0;
+    list-style-type: none;   
+}
+.NavLi {
+    box-sizing: border-box;
+    width: 15em;
+    height: 3em;
+    font-family: sans-serif;
+    font-size: 20px;
+    border-radius: 0.5em;
+    box-shadow: 0 0 1em rgba(0,0,0,0.2);
+    margin: 0.5em;
+    text-transform: capitalize;
+    line-height: 3em;
+    transition: .3s;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.NavLi:nth-child(2n-1) {
+    background-image: linear-gradient(to right, orange, tomato);
+    padding-left: 10%;
+  /*   transform: perspective(500px)         rotateX(45deg); */
+      transform: perspective(500px)         rotateY(45deg);
+  
+  }
+.NavLi:nth-child(2n) {
+    background-image: linear-gradient(to right, orange, tomato);
+    padding-right: 10%;
+    text-align: right;  
+    transform: perspective(500px) rotateY(-45deg);
+  }
+  
+.NavLi:nth-child(odd):hover {
+    transform: perspective(200px) rotateY(45deg);
+    padding-left: 5%;
+  }
+  
+.NavLi:nth-child(even):hover {
+    transform: perspective(200px) rotateY(-45deg);
+    padding-left: 5%;
+  }

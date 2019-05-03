@@ -1,0 +1,33 @@
+.mainNav{
+    background-color: azure;
+}
+  
+.mainNav ul {
+    margin: 0;padding: 0; 
+    line-height: 3em;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+.mainNav li{
+    margin: 0 5px;
+}
+    
+.mainNav a {  
+    /* width: 30%;  */
+    text-align: center;
+    text-decoration: none;
+    background-color: #CCCCCC;
+  }
+    
+.mainNav a:hover{
+    background-color: #E6E6FA;
+}
+
+.dropDown {
+    display: none;
+    position: relative;
+}
+
+
+

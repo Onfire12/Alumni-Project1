@@ -1,13 +1,13 @@
-import React from 'react';
+import React, {Component}from 'react';
 import "./currencyConverter.css";
 
-class CurrencyConverter extends React.Component{
+class CurrencyConverter extends Component{
   constructor(){
 
     super();
     this.state = {
       defaultCurrency:"USD",
-      convertCurrency:"",
+      convertCurrency:"GBP",
       defaultAmount:1,
       rates:[],
       currencies:[]
@@ -18,7 +18,6 @@ class CurrencyConverter extends React.Component{
     this.editConvertCurrency = this.editConvertCurrency.bind(this);
     this.getApi = this.getApi.bind(this);
     this.getConvertedCurrency.bind(this);
-
   }
 
   componentDidMount(){
@@ -26,14 +25,17 @@ class CurrencyConverter extends React.Component{
   }
 
   editDefaultCurrency(e){
-    this.setState({defaultCurrency: e.target.value});
+    this.setState({
+      defaultCurrency: e.target.value});
     this.getApi(e.target.value)
   }
   changeDefaultAmount(e){
-    this.setState({defaultAmount: e.target.value})
+    this.setState({
+      defaultAmount: e.target.value})
   }
   editConvertCurrency(e){
-    this.setState({convertCurrency: e.target.value})
+    this.setState({
+      convertCurrency: e.target.value})
   }
   getApi = async(base)=>{
     const api = `https://api.exchangeratesapi.io/latest?base=${base}`;
@@ -58,29 +60,31 @@ class CurrencyConverter extends React.Component{
     const result = this.getConvertedCurrency(defaultAmount,convertCurrency,rates);
     
     return(
-      <div className="mainSection">
+      <div className="CurrencyConverterSection">
 
         <div className="titleContainer">
-          <h1>Currency Converter <span><i class="fas fa-comment-dollar"></i></span></h1>
+          <h1>Currency Converter <span><i className="fas fa-comment-dollar"></i></span></h1>
         </div>
 
       <form className="converterform">
-      <div className="container">
+      <div className="container">          
           <label>Amount:</label>
+          <div className="inputText">
           <input type="number" value={defaultAmount} onChange={this.changeDefaultAmount} placeholder="$"/>
+          </div>
       </div>
 
 
       <div className="container">
         <label>From:</label>
-        <div className="selectContainer">
+        
           <form className="formContainer">
           <select value={defaultCurrency} onChange={this.editDefaultCurrency}>
             {currencyOption}
             <option>{defaultCurrency}</option>
           </select>
           </form>   
-        </div>
+        
         <input type="hidden"></input>
       </div>
 
@@ -90,13 +94,13 @@ class CurrencyConverter extends React.Component{
 
       <div className="container">
         <label>To:</label>
-        <div className="selectContainer">
+        
           <form className="formContainer">
             <select value={convertCurrency}onChange={this.editConvertCurrency}>
               {currencyOption}
             </select>
           </form>     
-        </div>
+        
         <input type="hidden"></input>
       </div>
 

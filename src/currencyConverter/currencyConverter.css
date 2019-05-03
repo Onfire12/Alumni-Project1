@@ -1,12 +1,13 @@
 
-.mainSection{
-    background-color: wheat;
-    border: 2px solid black;
-    margin: 10px 20%;
+.CurrencyConverterSection{
+    background-color: wheat;   
+    margin: 50px 10%;
     height: 50%;
     display: block;
     max-width: 1000px;
-    
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 3px 5px 45px black;
 }
 
 .containerform{
@@ -16,6 +17,7 @@
     margin: 0 auto;
 }
 .titleContainer{
+    padding-top:5px;
     font: bold;
     font-size: 20px;
 }
@@ -26,10 +28,16 @@
     position: relative;
 }
 
+.inputText{
+    text-align: center;
+}
+
 label{
-    font-size: 1em;
+    font-size: 1.5em;
     display: block;
     margin: 0 10px 7px;
+    float: left;
+    font-weight: bold;
 }
 
 input{
@@ -39,23 +47,9 @@ input{
     border-radius: 10px;
     background: rgb(255, 255, 255);
     border-width: 0px;
-    border-style: initial;
-    border-color: initial;
-    border-image: initial;
-    border-radius: 10px;
     font-size: 2.2em;
     padding-left: 20px;
-}
-
-.selectContainer{
-background-color: #fff;
-color: #002272;
-cursor: pointer;
-font-size: 1.8em;
-border-width: 0;
-width: 100%;
-border-radius: 10px;
-overflow-y: hidden;
+    
 }
 
 .formContainer{
@@ -68,8 +62,6 @@ overflow-y: hidden;
 
 .resultContainer{
     text-align: center;
-    margin:20px auto;
-    height: 300px;
+    margin:20px auto;  
     width: 100%;
-    border: 1px solid black;
 }
