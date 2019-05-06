@@ -5,7 +5,7 @@
       0px 2px 2px 0px rgba(0, 0, 0, 0.14), 
       0px 1px 5px 0px rgba(0, 0, 0, 0.12);  
   width: 50%;
-  margin: 0 auto;  
+  margin: 0 auto;   
 } 
 .collapse__title {
     display: flex;
@@ -25,6 +25,7 @@
     transition: 
       max-height .5s ease,
       padding .6s ease;
+    overflow: auto;
 }
   
 .collapse--hidden .collapse__body{     

@@ -19,7 +19,9 @@ class Collapse extends Component {
           <span>{this.props.title} </span>
           <span>{symbol}</span>
         </div>
-        <div className="collapse__body">{this.props.children}</div>
+        <div className="collapse__body">
+        {this.props.children}
+        </div>
       </div>
     )    
   }

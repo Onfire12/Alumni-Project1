@@ -1,3 +1,10 @@
 .Main-Container{
-    
+   
+
+}
+
+.collapseItem{
+    border:1px black solid;
+    overflow: hidden;
+    position: relative;
 }

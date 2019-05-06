@@ -11,13 +11,13 @@ class Main extends  Component{
           <div className="MainContainer">
             <h1>Hello Tools</h1>
             <Collapse title={"Currency Converter"}>
-              <div>
+              <div className="collapseItem">
               <Currency/>
               </div>
             </Collapse>
   
             <Collapse title={"Weather Now"}>
-              <div>
+              <div className="collapseItem">
                 <Weather/>
               </div>
             </Collapse>
