@@ -1,3 +1,26 @@
+# Simple Tool Bar
+# now include a Currency Converter and a Weather  prediction
+
+![screenshot](https://imgur.com/vjDuhO2.png)
+![screenshot](https://imgur.com/A5klmjt.png)
+  
+> A personal front-end skill practice of using third party api on React component.
+
+## Live Demo
+
+To see the app in action, go to []()
+
+## Features
+ * User will get similar result as they search on Google
+
+## Technologies
+Front-end:
+- React
+- HTML/CSS/JavaScript
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
